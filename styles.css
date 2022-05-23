@@ -114,12 +114,15 @@ img {
     border-color: var(--primary);
 }
 
-.border_bottom {
+ .border_bottom {
+    
+    align-items: center;
     text-align: center;
     display: inline-block;
     border-bottom: 2px solid var(--primary);
     color: var(--primary);
     margin-bottom: 2.5rem;
+    margin-left: 10rem;
 }
 
 nav {
@@ -567,6 +570,10 @@ svg {
 
 .gallery a img:hover {
     transform: scale(1.4);
+}
+.faqs h2 {
+    margin-left: 5rem;
+    text-align: center;
 }
 
 
