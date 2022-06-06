@@ -115,14 +115,15 @@ img {
 }
 
  .border_bottom {
-    
+    color: var(--primary);
     align-items: center;
+    justify-content: center;
     text-align: center;
     display: inline-block;
-    border-bottom: 2px solid var(--primary);
-    color: var(--primary);
-    margin-bottom: 2.5rem;
-    margin-left: 10rem;
+    border-bottom-style: 2px solid;
+    border-bottom-width: medium;
+    border-bottom-color: var(--primary);
+    margin-bottom: 2rem;
 }
 
 nav {
@@ -392,9 +393,7 @@ svg {
 }
 
 /* ======SKILLS======= */
-.skills .new {
-    text-align: center;
-}
+
 
 .skills_container {
     display: flex;
@@ -406,6 +405,15 @@ svg {
     background-color: var(--black);
     border-radius: 0.7rem;
     box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+.skills h2{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    border-bottom-style: 2px solid;
+    border-bottom-width: medium;
+    border-bottom-color: var(--primary);
 }
 
 .skills_container .bar {
@@ -542,6 +550,7 @@ svg {
 .portfolio_container {
     text-align: center;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .gallery {
@@ -575,42 +584,37 @@ svg {
 /* Contact Section */
 .contact-container{
     background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-      background-size: cover;
-    padding: 2rem;
-  }
-  
-  }
-  .container {
-    border-radius: 2rem;
-    background-color: #fff;
+    background-size: cover;
+    padding: 4rem;
     align-content: center;
     justify-content: center;
     text-align: center;
-    max-width:400px;
     width:100%;
-    margin: rem;;
+    margin-bottom: 2rem;
     position: relative;
   }
+  
   
   #contact-form input[type="text"], #contact-form input[type="email"], #contact-form input[type="tel"], #contact-form input[type="url"], #contact-form textarea, #contact-form button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
   
   #contact-form {
   border-radius: 2rem;
   background-color: #fff;
-  padding:10px;
-  right:3rem;
+  padding: 3rem;
   width: 50%;
   margin-left: 16rem;
+  margin-right: 16rem;
   text-align: center;
   }
   
   
   #contact-form h3 {
     text-align: center;
-      color: #000;
-      display: block;
-      font-size: 30px;
-      font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
   }
   
   
@@ -625,6 +629,7 @@ svg {
   #contact-form input[type="text"], #contact-form input[type="email"], #contact-form input[type="tel"], #contact-form input[type="url"], #contact-form textarea {
       width:100%;
       border:1px solid #CCC;
+      border-radius: 2rem;
       background:#FFF;
       margin:0 0 5px;
       padding:10px;
@@ -693,8 +698,12 @@ svg {
 
 /* FAQ Section */
 .faqs h2 {
-    margin-left: 5rem;
+    color: var(--primary);
     text-align: center;
+    justify-content: center;
+    border-bottom-style: 2px solid;
+    border-bottom-width: medium;
+    border-bottom-color: var(--primary);
 }
 
 
@@ -924,9 +933,6 @@ footer ul li a:hover {
         box-shadow: 0 3px 5px var(--primary);
     }
 
-    .courses_container{
-        grid-template-columns: repeat(2,1fr);
-    }
     
     .faqs_container{
         grid-template-columns: 1fr;
@@ -952,22 +958,26 @@ footer ul li a:hover {
     }
     .header_container{
         flex-direction: column;
-    }
-    .header_left{
-        margin-top: 10rem;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header_left img{
+        /* margin-top: 5rem; */
+        /* margin-bottom: 8rem; */
+        margin-left: -3rem;
+        /* margin-right: 8rem; */
+        /* justify-content: center; */
+        /* align-items: center; */
         
-            
-    }
-    .header_right{
-       margin-top: -15rem;
-       margin-bottom:-7rem ;
-        margin-left: 7rem;
-        margin-right: 1rem;
-        justify-content: center;
-    
+}
+.header_right{
+    /* margin-top: -15rem; */
+    margin-bottom: 8rem;
+    /* margin-left: 32rem; */
+    margin-right: 32rem; 
+    justify-content: center;
+   
     
 }
    
@@ -1024,6 +1034,19 @@ footer ul li a:hover {
     .footer_social{
         justify-content: center;
     }
+    .contact-container{
+        background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+        background-size: cover;
+        width: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    #contact-form{
+        width: 50%;
+        /* margin-left: 2rem; */
+        margin-right: 80rem;
+       }
 }
 /* ========MEDIA QUERIES (Tablet)======== */
 
@@ -1036,23 +1059,30 @@ footer ul li a:hover {
         right: 3%;
     }
     
+    .header_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
     .header_left{
-            margin-top: 10rem;
-            margin-left: 0.5rem;
+            margin-top: 5rem;
+            margin-bottom: 12rem;
+            margin-left: 4rem;
             margin-right: 0.5rem;
-            justify-content: center;
-            align-items: center;
+            
             
     }
     .header_right{
         margin-top: -15rem;
-        margin-bottom:-10rem;
-        justify-content: center;
+        margin-bottom: 8rem;
+        margin-left: 32rem;
+        margin-right: 32rem;
+        /* justify-content: center; */
+       
         
 }
-    .header_container{
-        flex-direction: column;
-    }
     .header_right .text-1 {
         font-size: 1rem;
     }
@@ -1104,5 +1134,18 @@ footer ul li a:hover {
 
     .footer_social{
         justify-content: center;
+    }
+    .contact-container{
+        background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+        background-size: cover;
+        width: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    #contact-form{
+     width: 75%;
+     margin-left: 6rem;
+     margin-right: 8rem;
     }
 }
