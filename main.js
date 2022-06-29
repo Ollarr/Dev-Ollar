@@ -1,94 +1,104 @@
 // Typing Script JS
-var typed = new Typed(".typing",{
-    strings: ["UI Designer", "Blogger", "Web Developer"],
-    typeSpeed: 80,
-    backSpeed: 80,
+var typed = new Typed(".typing", {
+	strings: [
+		"UI Designer",
+		"Blogger",
+		"Wordpress Developer",
+		"Front-end Developer",
+	],
+	typeSpeed: 80,
+	backSpeed: 80,
 });
 
-var typed = new Typed(".typing-2",{
-    strings: ["UI Designer", "Blogger",  "Web Developer"],
-    typeSpeed: 100,
-    backSpeed: 60,
+var typed = new Typed(".typing-2", {
+	strings: [
+		"UI Designer",
+		"Blogger",
+		"Wordpress Developer",
+		"Front-end Developer",
+	],
+	typeSpeed: 100,
+	backSpeed: 60,
 });
 
 // Show/Hide FAQs answer
-const faqs = document.querySelectorAll('.faq');
-faqs.forEach(faq => {
-    faq.addEventListener('click', () => {
-        faq.classList.toggle('open');
+const faqs = document.querySelectorAll(".faq");
+faqs.forEach((faq) => {
+	faq.addEventListener("click", () => {
+		faq.classList.toggle("open");
 
-        //change icon
-        const icon = faq.querySelector('.faq_icon i');
-        if (icon.className === 'fa-solid fa-plus'){
-            icon.className = 'fa-solid fa-minus';
-        }
-        else{
-            icon.className = 'fa-solid fa-plus';
-        }
-
-    })
-})
+		//change icon
+		const icon = faq.querySelector(".faq_icon i");
+		if (icon.className === "fa-solid fa-plus") {
+			icon.className = "fa-solid fa-minus";
+		} else {
+			icon.className = "fa-solid fa-plus";
+		}
+	});
+});
 
 //Show/hide nav menu
-const menu = document.querySelector('.nav_menu');
-const menuBtn = document.querySelector('#open-menu-btn');
-const closeBtn = document.querySelector('#close-menu-btn');
+const menu = document.querySelector(".nav_menu");
+const menuBtn = document.querySelector("#open-menu-btn");
+const closeBtn = document.querySelector("#close-menu-btn");
 
-menuBtn.addEventListener('click', () => {
-    menu.style.display = "flex";
-    closeBtn.style.display = "inline-block";
-    menuBtn.style.display = "none";
-})
+menuBtn.addEventListener("click", () => {
+	menu.style.display = "flex";
+	closeBtn.style.display = "inline-block";
+	menuBtn.style.display = "none";
+});
 
 //close nav menu
 const closeNav = () => {
-    menu.style.display = "none";
-    closeBtn.style.display = "none";
-    menuBtn.style.display = "inline-block";
-}
-closeBtn.addEventListener('click', closeNav);
+	menu.style.display = "none";
+	closeBtn.style.display = "none";
+	menuBtn.style.display = "inline-block";
+};
+closeBtn.addEventListener("click", closeNav);
 
 //nav color change on scroll
-window.addEventListener('scroll', () => {
-    document.querySelector('nav').classList.toggle('window-scroll', window.scrollY>100);
-})
+window.addEventListener("scroll", () => {
+	document
+		.querySelector("nav")
+		.classList.toggle("window-scroll", window.scrollY > 100);
+});
 // contact validation
-function validate(){
-    var name = document.getElementById("name").value;
-    var subject = document.getElementById("subject").value;
-    var phone = document.getElementById("phone-no").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-    var error_message = document.getElementById("error_message");
-    
-    error_message.style.padding = "10px";
-    
-    var text;
-    if(name.length < 5){
-      text = "Please Enter valid Name";
-      error_message.innerHTML = text;
-      return false;
-    }
-    if(subject.length < 10){
-      text = "Please Enter Correct Subject";
-      error_message.innerHTML = text;
-      return false;
-    }
-    if(isNaN(phone) || phone.length != 10){
-      text = "Please Enter valid Phone Number";
-      error_message.innerHTML = text;
-      return false;
-    }
-    if(email.indexOf("@") == -1 || email.length < 6){
-      text = "Please Enter valid Email";
-      error_message.innerHTML = text;
-      return false;
-    }
-    if(message.length <= 140){
-      text = "Please Enter More Than 140 Characters";
-      error_message.innerHTML = text;
-      return false;
-    }
-    alert("Form Submitted Successfully!");
-    return true;
-  }
+function validate() {
+	var name = document.getElementById("name").value;
+	var subject = document.getElementById("subject").value;
+	var phone = document.getElementById("phone-no").value;
+	var email = document.getElementById("email").value;
+	var message = document.getElementById("message").value;
+	var error_message = document.getElementById("error_message");
+
+	error_message.style.padding = "10px";
+
+	var text;
+	if (name.length < 5) {
+		text = "Please Enter valid Name";
+		error_message.innerHTML = text;
+		return false;
+	}
+	if (subject.length < 10) {
+		text = "Please Enter Correct Subject";
+		error_message.innerHTML = text;
+		return false;
+	}
+	if (isNaN(phone) || phone.length != 10) {
+		text = "Please Enter valid Phone Number";
+		error_message.innerHTML = text;
+		return false;
+	}
+	if (email.indexOf("@") == -1 || email.length < 6) {
+		text = "Please Enter valid Email";
+		error_message.innerHTML = text;
+		return false;
+	}
+	if (message.length <= 140) {
+		text = "Please Enter More Than 140 Characters";
+		error_message.innerHTML = text;
+		return false;
+	}
+	alert("Form Submitted Successfully!");
+	return true;
+}
