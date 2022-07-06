@@ -264,11 +264,15 @@ nav button {
 	text-align: center;
 	margin-top: -2rem;
 }
+
 .about-svg {
 	width: 100%;
 	height: auto;
 	border: none;
 	outline: none;
+}
+.about h2 {
+	margin-top: 1rem;
 }
 
 .about_container {
@@ -889,7 +893,7 @@ footer ul li a:hover {
 		cursor: pointer;
 	}
 
-	nav button#close-menu-btn {
+	nav button #close-menu-btn {
 		display: none;
 	}
 
