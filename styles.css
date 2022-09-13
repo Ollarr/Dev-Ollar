@@ -298,8 +298,11 @@ nav button {
 }
 
 .about_container .about-img {
-	border: 2px solid var(--primary);
-	border-radius: 16px;
+	/* border: 2px solid var(--primary); */
+	background-color: var(--normal);
+	border-radius: 63% 37% 45% 55% / 69% 69% 31% 31%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	/* width: 400px; */
 	overflow: hidden;
 	max-width: 16rem;
 	max-height: 16rem;
@@ -308,6 +311,18 @@ nav button {
 	position: relative;
 	align-items: center;
 	margin-bottom: 2rem;
+	transition: border-radius 500ms ease-in-out;
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image: repeating-radial-gradient(
+			circle at 0 0,
+			transparent 0,
+			#e5e5f7 10px
+		),
+		repeating-linear-gradient(#444cf755, #444cf7);
+}
+.about_container .about-img:hover {
+	border-radius: 63% 37% 40% 60% / 58% 15% 85% 42%;
 }
 .about-img img {
 	width: 100%;
