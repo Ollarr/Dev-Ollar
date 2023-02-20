@@ -277,7 +277,7 @@ nav button {
 	outline: none;
 } */
 .about h2 {
-	margin-top: 1rem;
+	margin-top: 3rem;
 }
 
 .about_container {
@@ -518,6 +518,10 @@ nav button {
 	background-color: var(--primary);
 	animation: animate 1s 3s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
+.bar .progress-line.wordpress span {
+	width: 80%;
+}
+
 
 .bar .progress-line.html span {
 	width: 80%;
@@ -528,14 +532,40 @@ nav button {
 }
 
 .bar .progress-line.javascript span {
-	width: 75%;
+	width: 70%;
 }
 
-.bar .progress-line.python span {
-	width: 20%;
+
+
+.bar .progress-line.boostrap span {
+	width: 70%;
+}
+.bar .progress-line.tailwind span {
+	width: 70%;
 }
 
-.bar .progress-line.mysql span {
+.bar .progress-line.material-ui span {
+	width: 50%;
+}
+.bar .progress-line.sass span {
+	width: 50%;
+}
+
+.bar .progress-line.react span {
+	width: 70%;
+}
+.bar .progress-line.redux span {
+	width: 50%;
+}
+
+.bar .progress-line.next span {
+	width: 50%;
+}
+.bar .progress-line.figma span {
+	width: 70%;
+}
+
+.bar .progress-line.git span {
 	width: 60%;
 }
 
@@ -573,7 +603,9 @@ nav button {
 		opacity: 1;
 	}
 }
-
+.progress-line.wordpress span::after {
+	content: "80%";
+}
 .progress-line.html span::after {
 	content: "80%";
 }
@@ -586,14 +618,34 @@ nav button {
 	content: "60%";
 }
 
-.progress-line.python span::after {
-	content: "20%";
+.progress-line.boostrap span::after {
+	content: "70%";
 }
 
-.progress-line.mysql span::after {
+.progress-line.tailwind span::after {
+	content: "70%";
+}
+.progress-line.material-ui span::after {
+	content: "50%";
+}
+.progress-line.sass span::after {
+	content: "50%";
+}
+.progress-line.react span::after {
+	content: "70%";
+}
+.progress-line.redux span::after {
+	content: "50%";
+}
+.progress-line.next span::after {
+	content: "50%";
+}
+.progress-line.figma span::after {
+	content: "70%";
+}
+.progress-line.git span::after {
 	content: "60%";
 }
-
 /* =======PORTFOLIO======= */
 
 .portfolio_container {
@@ -828,6 +880,11 @@ footer {
 
 .footer_container > div h4 {
 	margin-bottom: 1.2rem;
+}
+.footer_container .footer-logo-text:hover {
+	color: var(--primary);
+	transform: rotateX(360deg);
+	transition-duration: 2.2s;
 }
 
 .footer_1 p {
